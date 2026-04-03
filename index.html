@@ -16,16 +16,52 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
             line-height: 1.6;
         }
 
+        /* Professional Header with Profile Image */
         .header-top {
-            background: linear-gradient(to right, #1e293b, #0f172a);
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            padding: 80px 20px;
             text-align: center;
             border-bottom: 1px solid #334155;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 25px; 
+            max-width: 850px;
+            text-align: left;
+        }
+
+        .profile-image {
+            width: 150px; 
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover; 
+            object-position: center 20%; /* Focuses on your face */
+            border: 4px solid var(--accent);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            background-color: var(--card-bg);
+        }
+
+        .header-text h1 { 
+            font-size: 2.8rem; 
+            margin: 0 0 5px 0; 
+            letter-spacing: -1.5px; 
+        }
+        
+        .header-text p { 
+            color: var(--text-dim); 
+            font-size: 1.2rem; 
+            margin: 0; 
+            font-weight: 300;
         }
 
         .container {
@@ -36,114 +72,134 @@
 
         .section-card {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 16px;
+            padding: 35px;
+            border-radius: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
             border: 1px solid #334155;
         }
 
-        h2 { color: var(--accent); margin-top: 0; }
+        h2 { color: var(--accent); margin-top: 0; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Skills Tags */
-        .skills-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+        .skills-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
         .skill-tag {
-            background: #334155;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-size: 0.9rem;
+            background: #0f172a;
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.85rem;
             font-weight: 600;
+            border: 1px solid #334155;
         }
 
-        /* Professional Blog Layout */
         .blog-featured {
             display: flex;
             background: #0f172a;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid var(--accent);
+            border: 1px solid #334155;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
+            margin-top: 20px;
         }
 
         .blog-featured:hover { 
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
         }
 
         .blog-img-area {
             width: 40%;
             background: url('tech_architecture.png') center/cover;
-            min-height: 200px;
+            min-height: 220px;
         }
 
         .blog-content {
-            padding: 20px;
+            padding: 25px;
             width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .read-more {
             margin-top: 15px;
+            font-weight: 700;
             color: var(--accent);
-            font-weight: bold;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
 
         .btn-main {
             display: inline-block;
             background: var(--accent);
             color: #0f172a;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 14px 32px;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 650px) {
+            .header-content { flex-direction: column; text-align: center; gap: 20px; }
+            .blog-featured { flex-direction: column; }
+            .blog-img-area { width: 100%; min-height: 180px; }
+            .blog-content { width: 100%; }
+            h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header-top">
-        <h1>Abdullah Ahmad Mirza</h1>
-        <p>Computer Engineering Student | Future Software Engineer</p>
-    </div>
-
-    <div class="container">
-        <div class="section-card">
-            <h2>About Me</h2>
-            <p>I am a passionate Computer Engineering student at UET Lahore. I enjoy exploring AI and software development to solve real-world problems.</p>
-        </div>
-
-        <div class="section-card">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">AI Tools</span>
-                <span class="skill-tag">HTML</span>
-                <span class="skill-tag">C#</span>
-                <span class="skill-tag">Problem Solving</span>
+    <header class="header-top">
+        <div class="header-content">
+            <img src="profile.JPEG" alt="Abdullah Ahmad Mirza" class="profile-image">
+            <div class="header-text">
+                <h1>Abdullah Ahmad Mirza</h1>
+                <p>Computer Engineering Student | Future Software Engineer</p>
             </div>
         </div>
+    </header>
+
+    <div class="container">
+        <section class="section-card">
+            <h2>About Me</h2>
+            <p>I am a passionate Computer Engineering student at <strong>UET Lahore</strong>. I specialize in bridging the gap between hardware logic and software architecture, with a focus on C#, SQL, and high-integrity engineering documentation.</p>
+        </section>
+
+        <section class="section-card">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">C# & .NET</span>
+                <span class="skill-tag">SQL Databases</span>
+                <span class="skill-tag">HTML/CSS</span>
+                <span class="skill-tag">WampServer</span>
+                <span class="skill-tag">AI Implementation</span>
+                <span class="skill-tag">Lab Documentation</span>
+            </div>
+        </section>
 
         <section class="section-card">
             <h2>Latest Technical Insights</h2>
-            <a href="blog.html" class="blog-featured"> 
+            <a href="blog.html" class="blog-featured">
                 <div class="blog-img-area"></div>
                 <div class="blog-content">
-                    <h3 style="margin-top:0">Explore My Blog</h3>
-                    <p style="color:var(--text-dim)">Read my latest articles on engineering and software.</p>
+                    <h3 style="margin:0">Explore My Blog</h3>
+                    <p style="color:var(--text-dim); font-size: 0.95rem; margin: 5px 0;">Read my latest articles on engineering and software architecture.</p>
                     <div class="read-more">View All Articles <span>→</span></div>
                 </div>
             </a>
         </section>
 
-        <div class="section-card" style="text-align:center">
-            <h2>My Goal</h2>
-            <p>To build a strong career as a successful engineer.</p>
+        <section class="section-card" style="text-align:center">
+            <h2>Professional Goal</h2>
+            <p>To architect stable, scalable software solutions that solve real-world engineering challenges.</p>
             <a href="mailto:your-email@example.com" class="btn-main">Say Hello 👋</a>
-        </div>
+        </section>
     </div>
 
 </body>
