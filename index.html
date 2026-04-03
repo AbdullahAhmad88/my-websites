@@ -1,152 +1,138 @@
-<section class="streaming-section">
-    <h2 class="hub-title">Continue Watching (My Journey)</h2>
-    
-    <div class="content-grid">
-        <article class="movie-card">
-            <div class="thumbnail-wrapper">
-                <img src="lab_sccene.png" alt="The Oscilloscope Scene" class="movie-img">
-                <div class="hover-overlay">
-                    <a href="blog-1.html" class="play-action-btn">▶ READ NOW</a>
-                </div>
-                <div class="playback-bar">
-                    <div class="playback-progress"></div>
-                </div>
-            </div>
-            <div class="movie-info">
-                <h3>The Oscilloscope & The Interface</h3>
-                <p>Engineering Labs • Season 1 • Episode 1</p>
-            </div>
-        </article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Ahmad Mirza | Portfolio</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
 
-        <article class="movie-card coming-soon">
-            <div class="thumbnail-wrapper placeholder">
-                <span class="lock-icon">🔒</span>
-                <p>SQL & Database Logic</p>
-            </div>
-            <div class="movie-info">
-                <h3>New Project Released Soon</h3>
-                <p>CS Fundamentals • S1 E2</p>
-            </div>
-        </article>
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .header-top {
+            background: linear-gradient(to right, #1e293b, #0f172a);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #334155;
+        }
+
+        h2 { color: var(--accent); margin-top: 0; }
+
+        /* Skills Tags */
+        .skills-grid { display: flex; gap: 10px; flex-wrap: wrap; }
+        .skill-tag {
+            background: #334155;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* The Professional Blog Layout */
+        .blog-featured {
+            display: flex;
+            background: #0f172a;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--accent);
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+        }
+
+        .blog-featured:hover { transform: translateY(-5px); }
+
+        .blog-img-area {
+            width: 40%;
+            background: url('lab_sccene.png') center/cover;
+            min-height: 200px;
+        }
+
+        .blog-content {
+            padding: 20px;
+            width: 60%;
+        }
+
+        .btn-main {
+            display: inline-block;
+            background: var(--accent);
+            color: #0f172a;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-top">
+        <h1>Abdullah Ahmad Mirza</h1>
+        <p>Computer Engineering Student | Future Software Engineer</p>
     </div>
-</section>
 
-<style>
-    /* Dark Aesthetic Fundamentals */
-    .streaming-section {
-        background-color: #050505; /* Deep black like Netflix background */
-        padding: 50px 20px;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        color: white;
-    }
+    <div class="container">
+        <div class="section-card">
+            <h2>About Me</h2>
+            <p>I am a passionate Computer Engineering student at UET Lahore. I enjoy exploring AI and software development to solve real-world problems.</p>
+        </div>
 
-    .hub-title {
-        font-size: 1.4rem;
-        margin-left: 10px;
-        margin-bottom: 25px;
-        letter-spacing: 0.5px;
-        color: #e5e5e5;
-    }
+        <div class="section-card">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">AI Tools</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">Problem Solving</span>
+            </div>
+        </div>
 
-    /* The Content Grid */
-    .content-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 25px;
-    }
+        <div class="section-card">
+            <h2>Latest Technical Insights</h2>
+            <a href="blog-1.html" class="blog-featured">
+                <div class="blog-img-area"></div>
+                <div class="blog-content">
+                    <h3 style="margin-top:0">The Oscilloscope and the Interface</h3>
+                    <p style="color:var(--text-dim)">Analyzing the signal path validation in engineering labs and its impact on technical documentation.</p>
+                    <span style="color:var(--accent); font-weight:bold;">Read Article →</span>
+                </div>
+            </a>
+        </div>
 
-    /* Movie Card Animation */
-    .movie-card {
-        position: relative;
-        background: transparent;
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        cursor: pointer;
-    }
+        <div class="section-card" style="text-align:center">
+            <h2>My Goal</h2>
+            <p>To build a strong career as a successful engineer.</p>
+            <a href="mailto:your-email@example.com" class="btn-main">Say Hello 👋</a>
+        </div>
+    </div>
 
-    .movie-card:hover {
-        transform: scale(1.08); /* Zoom effect like Crunchyroll */
-        z-index: 5;
-    }
-
-    /* Thumbnail Styles */
-    .thumbnail-wrapper {
-        position: relative;
-        aspect-ratio: 16 / 9; /* Cinematic Wide Format */
-        overflow: hidden;
-        border-radius: 4px;
-        background: #141414;
-    }
-
-    .movie-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Play Button Overlay */
-    .hover-overlay {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .movie-card:hover .hover-overlay {
-        opacity: 1;
-    }
-
-    .play-action-btn {
-        background-color: #fff;
-        color: #000 !important;
-        padding: 12px 24px;
-        border-radius: 4px;
-        font-weight: 800;
-        font-size: 0.9rem;
-        text-decoration: none;
-        letter-spacing: 1px;
-    }
-
-    /* Red Netflix-style Progress Bar */
-    .playback-bar {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 4px;
-        background: #444;
-    }
-
-    .playback-progress {
-        width: 35%; /* Simulates that the reader has "started" the blog */
-        height: 100%;
-        background: #e50914; /* Signature Netflix Red */
-    }
-
-    /* Info Section */
-    .movie-info h3 {
-        font-size: 1.1rem;
-        margin: 12px 0 4px 0;
-        color: #fff;
-    }
-
-    .movie-info p {
-        font-size: 0.85rem;
-        color: #808080;
-        margin: 0;
-    }
-
-    /* Coming Soon Placeholder */
-    .placeholder {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #1a1a1a;
-        color: #555;
-    }
-
-    .lock-icon { font-size: 2rem; margin-bottom: 10px; }
-</style>
+</body>
+</html>
