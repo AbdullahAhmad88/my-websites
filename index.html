@@ -55,7 +55,7 @@
             font-weight: 600;
         }
 
-        /* The Professional Blog Layout */
+        /* Fixed Professional Blog Layout */
         .blog-featured {
             display: flex;
             background: #0f172a;
@@ -64,10 +64,13 @@
             border: 1px solid var(--accent);
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .blog-featured:hover { transform: translateY(-5px); }
+        .blog-featured:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+        }
 
         .blog-img-area {
             width: 40%;
@@ -117,8 +120,7 @@
 
         <div class="section-card">
             <h2>Latest Technical Insights</h2>
-           <a href="first_blog.html" class="blog-featured">
-    </a>
+            <a href="first_blog.html" class="blog-featured">
                 <div class="blog-img-area"></div>
                 <div class="blog-content">
                     <h3 style="margin-top:0">The Oscilloscope and the Interface</h3>
