@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecting Determinism | Abdullah Ahmad Mirza</title>
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --surface: #161b2a;
+            --accent: #38bdf8;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #2d3748;
+            --code-bg: #000000;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 80px 20px; 
+        }
+        
+        .nav-back { 
+            color: var(--accent); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            transition: transform 0.2s;
+        }
+
+        .nav-back:hover { transform: translateX(-5px); }
+
+        .category-tag {
+            color: var(--accent);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        h1 { 
+            font-size: 3.5rem; 
+            margin: 0 0 30px 0; 
+            line-height: 1.1;
+            letter-spacing: -2px; 
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .featured-image { 
+            width: 100%; 
+            border-radius: 24px; 
+            margin: 40px 0; 
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+        }
+
+        .article-content {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+        }
+
+        h2 { 
+            color: var(--accent); 
+            font-size: 2rem; 
+            margin-top: 60px; 
+            letter-spacing: -1px;
+        }
+
+        .insight-box {
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 20px;
+            border-left: 5px solid var(--accent);
+            margin: 50px 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+        }
+
+        .code-block {
+            background: var(--code-bg);
+            padding: 30px;
+            border-radius: 16px;
+            font-family: 'Fira Code', monospace;
+            font-size: 1rem;
+            color: #10b981;
+            margin: 40px 0;
+            border: 1px solid #064e3b;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .code-label {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            background: #064e3b;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 0 0 8px 8px;
+            text-transform: uppercase;
+        }
+
+        footer { 
+            margin-top: 100px; 
+            padding-top: 40px; 
+            border-top: 1px solid var(--border);
+            text-align: center; 
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        strong { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="index.html" class="nav-back">← BACK TO SYSTEMS</a>
+        <span class="category-tag">Engineering Philosophy</span>
+        <h1>Architecting Determinism: Applying Laws of Physics to SQL</h1>
+    </header>
+
+    <div class="article-content">
+        <p>At <strong>UET Faisalabad</strong>, my labs are governed by the laws of thermodynamics and electromagnetism. In these environments, we strive for <strong>determinism</strong>—the guarantee that a specific input will always yield the exact same output. When I transitioned into software architecture, I realized the biggest threat to high-performance systems is <strong>Logical Entropy</strong>.</p>
+
+        <img src="system_architecture_flow.png" alt="Digital System Architecture" class="featured-image">
+
+        <h2>1. The SQL Gravity Principle</h2>
+        <p>In Physics, gravity is a constant constraint. In my <strong>SQL Database</strong> design, I treat Data Integrity as a physical force. By using strict <code>CHECK</code> constraints and <code>FOREIGN KEYS</code>, I ensure that data cannot "float away" or become corrupted. We don't just store data; we build a digital universe with unshakeable rules.</p>
+
+        <div class="code-block">
+            <span class="code-label">SQL Schema</span>
+            -- Enforcing Digital Determinism
+            CREATE TABLE Lab_Integrity (
+                Signal_ID INT PRIMARY KEY,
+                Voltage_Reading DECIMAL(5,2) NOT NULL,
+                CONSTRAINT Physical_Limit CHECK (Voltage_Reading <= 240.00)
+            );
+        </div>
+
+        <div class="insight-box">
+            "A software system is only as strong as the physical logic it is built upon. If the schema is weak, the application is a hallucination."
+        </div>
+
+        <h2>2. C# and Error Calculation</h2>
+        <p>In our <strong>Physics labs</strong> studying the Sonometer or Pendulums, we are taught to account for error margins. In <strong>C# programming</strong>, I apply this by building defensive architectures. Every method I write assumes the input might be "noisy," and I use rigorous validation to maintain the system's equilibrium.</p>
+
+        <p>By treating <strong>Computer Engineering</strong> as a extension of the physical sciences, we move past being "coders" and become <strong>Architects of Reality</strong>.</p>
+
+        <h2>3. Conclusion</h2>
+        <p>Whether I am analyzing a SQL manual or calibrating an experiment at UET, the goal is the same: <strong>Stability</strong>. As I continue my journey, I focus on building systems that don't just work—they endure.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Ahmad Mirza | UET Faisalabad Campus | Future Software Engineer</p>
+    </footer>
+</div>
+
+</body>
+</html>
