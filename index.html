@@ -55,7 +55,7 @@
             font-weight: 600;
         }
 
-        /* Fixed Professional Blog Layout */
+        /* Professional Blog Layout */
         .blog-featured {
             display: flex;
             background: #0f172a;
@@ -74,13 +74,22 @@
 
         .blog-img-area {
             width: 40%;
-            background: url('lab_sccene.png') center/cover;
+            background: url('tech_architecture.png') center/cover;
             min-height: 200px;
         }
 
         .blog-content {
             padding: 20px;
             width: 60%;
+        }
+
+        .read-more {
+            margin-top: 15px;
+            color: var(--accent);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .btn-main {
@@ -118,17 +127,17 @@
             </div>
         </div>
 
-        <div class="section-card">
+        <section class="section-card">
             <h2>Latest Technical Insights</h2>
-            <a href="first_blog.html" class="blog-featured">
+            <a href="blog.html" class="blog-featured"> 
                 <div class="blog-img-area"></div>
                 <div class="blog-content">
-                    <h3 style="margin-top:0">The Oscilloscope and the Interface</h3>
-                    <p style="color:var(--text-dim)">Analyzing the signal path validation in engineering labs and its impact on technical documentation.</p>
-                    <span style="color:var(--accent); font-weight:bold;">Read Article →</span>
+                    <h3 style="margin-top:0">Explore My Blog</h3>
+                    <p style="color:var(--text-dim)">Read my latest articles on engineering and software.</p>
+                    <div class="read-more">View All Articles <span>→</span></div>
                 </div>
             </a>
-        </div>
+        </section>
 
         <div class="section-card" style="text-align:center">
             <h2>My Goal</h2>
