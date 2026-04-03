@@ -16,111 +16,29 @@
         body {
             background-color: var(--bg);
             color: var(--text-primary);
-            font-family: 'Inter', 'Segoe UI', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.8;
             margin: 0;
         }
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
 
-        header a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.2s;
-        }
+        header a { color: var(--accent); text-decoration: none; font-weight: 600; }
 
-        header a:hover { opacity: 0.8; }
+        h1 { font-size: 3rem; color: var(--accent); margin: 20px 0; line-height: 1.1; }
 
-        h1 {
-            font-size: 3.2rem;
-            color: var(--accent);
-            margin: 20px 0 10px 0;
-            line-height: 1.1;
-            letter-spacing: -1px;
-        }
+        .subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 40px; }
 
-        .subtitle {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
+        h2 { font-size: 1.8rem; color: var(--accent); margin-top: 50px; border-left: 4px solid var(--accent); padding-left: 15px; }
 
-        h2 {
-            font-size: 1.8rem;
-            color: var(--accent);
-            margin-top: 50px;
-            border-left: 4px solid var(--accent);
-            padding-left: 15px;
-        }
+        .blog-image { width: 100%; border-radius: 16px; margin: 40px 0; border: 1px solid #2d3748; }
 
-        .blog-image {
-            width: 100%;
-            border-radius: 16px;
-            margin: 40px 0;
-            border: 1px solid #2d3748;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
+        .image-caption { text-align: center; color: var(--text-secondary); font-size: 0.9rem; margin-top: -30px; margin-bottom: 40px; }
 
-        .image-caption {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: -30px;
-            margin-bottom: 40px;
-        }
+        .highlight-box { background: var(--surface); padding: 30px; border-radius: 12px; border: 1px solid #2d3748; margin: 40px 0; font-style: italic; }
 
-        .highlight-box {
-            background: var(--surface);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #2d3748;
-            position: relative;
-            margin: 40px 0;
-        }
-
-        .highlight-box::before {
-            content: "“";
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 5rem;
-            color: var(--accent);
-            opacity: 0.3;
-        }
-
-        .tech-tags {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .tech-tag {
-            background: #0f172a;
-            color: var(--accent);
-            padding: 5px 15px;
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-        }
-
-        footer {
-            margin-top: 100px;
-            padding-top: 40px;
-            border-top: 1px solid #1e293b;
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
+        footer { margin-top: 80px; padding-top: 30px; border-top: 1px solid #1e293b; text-align: center; color: var(--text-secondary); }
+        
         strong { color: var(--accent); }
     </style>
 </head>
@@ -130,55 +48,38 @@
     <header>
         <a href="blog.html">← Return to Blog List</a>
         <h1>The Oscilloscope and the Interface</h1>
-        <p class="subtitle">Bridging the gap between Hardware Logic and Software Design at UET.</p>
+        <p class="subtitle">Tracing the logic from UET engineering labs to software architecture.</p>
     </header>
 
     <main>
-        <p>In the quiet, intense atmosphere of a <strong>UET engineering lab</strong>, the success of a project is rarely defined by the final, flashing indicator. It isn't enough that the logic gate activates, or that the motor spins. The light might turn on today by chance, but in true engineering, the results are ephemeral without the documentation that validates <strong>why</strong>.</p>
+        <p>In the engineering labs at <strong>UET</strong>, we are taught that a signal is only as good as its integrity. Whether it's a pulse on an oscilloscope or a row in a SQL database, the logic remains the same: <strong>Validate every path.</strong></p>
 
-        <img src="lab_sccene.png" alt="Engineering student analyzing an oscilloscope at UET" class="blog-image">
-        <p class="image-caption">Image 1: The foundational analytical process: tracing signal integrity using an oscilloscope in a UET lab environment.</p>
+        <img src="lab_sccene.png" alt="Lab Analysis" class="blog-image">
+        <p class="image-caption">Analyzing signal integrity in the engineering lab.</p>
 
-        <p>This principle is what I have carried over into my software development journey. Just as a physical circuit must be validated for signal integrity to avoid catastrophic noise, a software interface must be validated for logical integrity to prevent catastrophic data loss.</p>
-        
-        <p>My academic path requires balancing divergent skill sets: one afternoon might be dedicated to validating voltage rails in a hardware lab, while the next is spent debugging a complex C# interface. We often treat these as different disciplines, but the core philosophy is identical: map the data path from input to output.</p>
+        <p>This blog post explores how my studies in Computer Engineering influence my approach to software. Most people see hardware and software as two different worlds, but I see them as a single continuous interface.</p>
 
-        <h2>1. The Analytical Approach to the Black Box</h2>
-        <p>In electronics, we must frequently confront the "Black Box"—a component where the input-to-output relationship is defined, but the internal workings are hidden. If that black box introduces noise, our only defense is the analytical process. By tracing the "Signal Path Logic," we can isolate the point of failure.</p>
+        <h2>1. The Precision of the Physical World</h2>
+        <p>When working with circuits, you quickly realize that "almost working" isn't good enough. A loose wire or a slightly off-sync frequency can destroy hours of work. This physical precision is what I apply to my <strong>C# programming</strong>. I don't just write code that works; I write code that is architecturally sound, much like a perfectly soldered PCB.</p>
+
+        <img src="tech_architecture.png" alt="Code Architecture" class="blog-image">
+        <p class="image-caption">Visualizing the flow from raw data to high-level architecture.</p>
 
         <div class="highlight-box">
-            "You don’t get marks for the light turning on; you get marks for proving why it turned on."
+            "Engineering is the art of proving why something works, not just showing that it does."
         </div>
 
-        <p>As a developer, I use this exact mindset. When I debug a complex C# function, I am not just looking for an output; I am using logging and step-by-step execution to trace the logical signal from the raw data input. My goal is to ensure the **"Signal Integrity of Code."**</p>
+        <h2>2. Data Integrity and SQL</h2>
+        <p>My recent project involves a comprehensive SQL lab manual. In database management, we deal with "logical signals." If a foreign key is missing or a relationship is poorly defined, the "data path" becomes noisy. My goal is to create systems where data flows as cleanly as electricity through a well-designed circuit.</p>
 
-        <h2>2. Data Integrity from Breadboard to Database</h2>
-        <img src="tech_architecture.png" alt="A glowing visualization connecting C# code with SQL data paths and architectural diagrams" class="blog-image">
-        <p class="image-caption">Image 2: Bridging the gap: A technical visualization showing how low-level circuit logic influences the architectural design of high-level C# and SQL data systems.</p>
+        <img src="lab_details.png" alt="Detailed Documentation" class="blog-image">
+        <p class="image-caption">Close-up of technical documentation and measurement verification.</p>
 
-        <p>The gap between a breadboard and a database is smaller than most people think. In both domains, the primary enemy is data corruption—the point where the intended signal becomes noisy or lost. My experiences with physical signal integrity are what make my technical documentation precise.</p>
-
-        <p>Consider the experience of documenting a complex **SQL Lab Manual**. In this domain, success isn’t a successful query; success is an efficient query architecture that can withstand unexpected inputs. Every table relationship is a crucial connection point, and any gap in the **"SQL DATA PATH"**—as visualized in the image above—is a point of future failure.</p>
-        
-        <p>My philosophy is that an engineer cannot leave gaps in a circuit diagram, and a software architect cannot leave gaps in a documentation structure. Success is the interface itself: the clean, validated structure that proves the path from raw signal to meaningful output.</p>
-
-        <h2>3. Tracing the Architecture of Success</h2>
-        <img src="lab_details.png" alt="Close up view of engineering tools, an oscilloscope screen, and detailed lab notes" class="blog-image">
-        <p class="image-caption">Image 3: Detailed documentation: Tracing and validating successful outputs by closely documenting the precise signal paths.</p>
-
-        <p>Whether I am validating frequency response in a circuit or validating the efficiency of an algorithm, the standard is unchanging: **Clarity is Power**. As I continue my journey from UET to a professional Software Engineer, I am not just learning to calculate voltage or write queries; I am learning to architect solutions that are stable, transparent, and built on validated documentation.</p>
-        
-        <div class="tech-tags">
-            <span class="skill-tag">Signal Integrity</span>
-            <span class="skill-tag">UET Lahore</span>
-            <span class="skill-tag">C# Development</span>
-            <span class="skill-tag">SQL Architecture</span>
-            <span class="skill-tag">Technical Documentation</span>
-        </div>
+        <p>By treating every software project with the same rigor we use in the lab, we can build tools that are not only functional but resilient. This is the future of engineering I am pursuing.</p>
     </main>
 
     <footer>
-        <p>&copy; 2026 Abdullah Ahmad Mirza | University of Engineering and Technology</p>
+        <p>&copy; 2026 Abdullah Ahmad Mirza | UET Faisalabad Campus</p>
     </footer>
 </div>
 
