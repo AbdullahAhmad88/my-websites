@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Abdullah Ahmad Mirza</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h1 { color: var(--accent); font-size: 2.5rem; margin-bottom: 40px; }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        /* Blog List Layout */
+        .blog-list { display: flex; flex-direction: column; gap: 25px; }
+
+        .blog-card {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: scale(1.02);
+            border-color: var(--accent);
+        }
+
+        .blog-thumb {
+            width: 30%;
+            background: url('tech_architecture.png') center/cover;
+            min-height: 150px;
+        }
+
+        .blog-info { padding: 20px; width: 70%; }
+        .blog-info h2 { margin: 0 0 10px 0; font-size: 1.25rem; color: #fff; }
+        .blog-info p { color: var(--text-dim); font-size: 0.95rem; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        <h1>Technical Blog</h1>
+
+        <div class="blog-list">
+            <a href="first_blog.html" class="blog-card">
+                <div class="blog-thumb"></div>
+                <div class="blog-info">
+                    <h2>The Oscilloscope and the Interface</h2>
+                    <p>Analyzing signal path validation and its impact on clean code architecture.</p>
+                </div>
+            </a>
+
+            <div style="padding: 40px; text-align: center; border: 2px dashed #334155; border-radius: 16px; color: var(--text-dim);">
+                New insights coming soon...
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
