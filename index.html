@@ -1,81 +1,152 @@
-<div class="card">
-    <h2>Latest Blog</h2>
-    <div class="blog-preview-box">
-        <p>Explore my latest insights on engineering labs and documentation.</p>
-        
-        <a href="blog-1.html" class="blog-link-btn">
-            Read my latest blog: The Oscilloscope and the Interface
-        </a>
-    </div>
-</div>
-
-<style>
-    /* Styling to match your white-card aesthetic */
-    .card {
-        background: #fff;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .blog-preview-box {
-        border-left: 4px solid #007bff; /* Matches your 'Say Hello' button blue */
-        padding-left: 20px;
-        margin-top: 15px;
-    }
-
-    .blog-link-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white !important;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: background 0.3s ease;
-    }
-
-    .blog-link-btn:hover {
-        background-color: #0056b3;
-        text-decoration: none;
-    }
-</style>
-<div class="card">
-    <h2>Latest Blog</h2>
-    <p>Insights into engineering labs and my journey as a developer.</p>
+<section class="streaming-section">
+    <h2 class="hub-title">Continue Watching (My Journey)</h2>
     
-    <a href="blog-1.html" class="say-hello-btn blog-btn">
-        Read My Latest Blog 📝
-    </a>
-</div>
+    <div class="content-grid">
+        <article class="movie-card">
+            <div class="thumbnail-wrapper">
+                <img src="lab_sccene.png" alt="The Oscilloscope Scene" class="movie-img">
+                <div class="hover-overlay">
+                    <a href="blog-1.html" class="play-action-btn">▶ READ NOW</a>
+                </div>
+                <div class="playback-bar">
+                    <div class="playback-progress"></div>
+                </div>
+            </div>
+            <div class="movie-info">
+                <h3>The Oscilloscope & The Interface</h3>
+                <p>Engineering Labs • Season 1 • Episode 1</p>
+            </div>
+        </article>
+
+        <article class="movie-card coming-soon">
+            <div class="thumbnail-wrapper placeholder">
+                <span class="lock-icon">🔒</span>
+                <p>SQL & Database Logic</p>
+            </div>
+            <div class="movie-info">
+                <h3>New Project Released Soon</h3>
+                <p>CS Fundamentals • S1 E2</p>
+            </div>
+        </article>
+    </div>
+</section>
 
 <style>
-    /* Styling to ensure it matches your existing design */
-    .card {
-        background: #fff;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        font-family: sans-serif;
+    /* Dark Aesthetic Fundamentals */
+    .streaming-section {
+        background-color: #050505; /* Deep black like Netflix background */
+        padding: 50px 20px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: white;
     }
 
-    .blog-btn {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #007bff; /* Matches your 'Say Hello' blue */
-        color: white !important;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: 600;
-        transition: background 0.3s ease;
+    .hub-title {
+        font-size: 1.4rem;
+        margin-left: 10px;
+        margin-bottom: 25px;
+        letter-spacing: 0.5px;
+        color: #e5e5e5;
     }
 
-    .blog-btn:hover {
-        background-color: #0056b3;
-        text-decoration: none;
+    /* The Content Grid */
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
     }
+
+    /* Movie Card Animation */
+    .movie-card {
+        position: relative;
+        background: transparent;
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        cursor: pointer;
+    }
+
+    .movie-card:hover {
+        transform: scale(1.08); /* Zoom effect like Crunchyroll */
+        z-index: 5;
+    }
+
+    /* Thumbnail Styles */
+    .thumbnail-wrapper {
+        position: relative;
+        aspect-ratio: 16 / 9; /* Cinematic Wide Format */
+        overflow: hidden;
+        border-radius: 4px;
+        background: #141414;
+    }
+
+    .movie-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Play Button Overlay */
+    .hover-overlay {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .movie-card:hover .hover-overlay {
+        opacity: 1;
+    }
+
+    .play-action-btn {
+        background-color: #fff;
+        color: #000 !important;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-weight: 800;
+        font-size: 0.9rem;
+        text-decoration: none;
+        letter-spacing: 1px;
+    }
+
+    /* Red Netflix-style Progress Bar */
+    .playback-bar {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background: #444;
+    }
+
+    .playback-progress {
+        width: 35%; /* Simulates that the reader has "started" the blog */
+        height: 100%;
+        background: #e50914; /* Signature Netflix Red */
+    }
+
+    /* Info Section */
+    .movie-info h3 {
+        font-size: 1.1rem;
+        margin: 12px 0 4px 0;
+        color: #fff;
+    }
+
+    .movie-info p {
+        font-size: 0.85rem;
+        color: #808080;
+        margin: 0;
+    }
+
+    /* Coming Soon Placeholder */
+    .placeholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #1a1a1a;
+        color: #555;
+    }
+
+    .lock-icon { font-size: 2rem; margin-bottom: 10px; }
 </style>
