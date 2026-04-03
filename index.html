@@ -112,9 +112,9 @@
 
         .blog-img-area {
             width: 40%;
-            /* Updated to match your blueprint image */
-            background: url('system_architecture_flow.png') center/cover;
-            min-height: 220px;
+            min-height: 180px;
+            background-size: cover;
+            background-position: center;
         }
 
         .blog-content {
@@ -154,7 +154,7 @@
         @media (max-width: 650px) {
             .header-content { flex-direction: column; text-align: center; gap: 20px; }
             .blog-featured { flex-direction: column; }
-            .blog-img-area { width: 100%; min-height: 180px; }
+            .blog-img-area { width: 100%; min-height: 150px; }
             .blog-content { width: 100%; }
             h1 { font-size: 2.2rem; }
         }
@@ -192,11 +192,21 @@
 
         <section class="section-card">
             <h2>Latest Technical Insights</h2>
+            
             <a href="architecting_determinism.html" class="blog-featured">
-                <div class="blog-img-area"></div>
+                <div class="blog-img-area" style="background-image: url('system_architecture_flow.png');"></div>
                 <div class="blog-content">
                     <h3 style="margin:0">Architecting Determinism</h3>
                     <p style="color:var(--text-dim); font-size: 0.95rem; margin: 5px 0;">Applying the laws of Physics to SQL and Software Architecture.</p>
+                    <div class="read-more">Read Full Article <span>→</span></div>
+                </div>
+            </a>
+
+            <a href="first_blog.html" class="blog-featured" style="margin-top: 20px;">
+                <div class="blog-img-area" style="background-image: url('uet_lab_oscilloscope.png');"></div>
+                <div class="blog-content">
+                    <h3 style="margin:0">The Signal and the Syntax</h3>
+                    <p style="color:var(--text-dim); font-size: 0.95rem; margin: 5px 0;">How UET Lab sessions redefined my approach to Software Engineering.</p>
                     <div class="read-more">Read Full Article <span>→</span></div>
                 </div>
             </a>
