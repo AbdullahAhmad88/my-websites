@@ -3,221 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdullah Ahmad Mirza | Portfolio</title>
+    <title>Abdullah Ahmad Mirza | UET Faisalabad</title>
     <style>
-        :root {
-            --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --accent: #38bdf8;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        /* Professional Header with Profile Image */
-        .header-top {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 1px solid #334155;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 25px; 
-            max-width: 850px;
-            text-align: left;
-        }
-
-        .profile-image {
-            width: 150px; 
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover; 
-            object-position: center 20%;
-            border: 4px solid var(--accent);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-            background-color: var(--card-bg);
-        }
-
-        .header-text h1 { 
-            font-size: 2.8rem; 
-            margin: 0 0 5px 0; 
-            letter-spacing: -1.5px; 
-        }
-        
-        .header-text p { 
-            color: var(--text-dim); 
-            font-size: 1.2rem; 
-            margin: 0; 
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .section-card {
-            background: var(--card-bg);
-            padding: 35px;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
-            border: 1px solid #334155;
-        }
-
-        h2 { color: var(--accent); margin-top: 0; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; }
-
-        .skills-grid { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 15px; }
-        .skill-tag {
-            background: #0f172a;
-            color: var(--accent);
-            padding: 8px 18px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid #334155;
-        }
-
-        .blog-featured {
-            display: flex;
-            background: #0f172a;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid #334155;
-            text-decoration: none;
-            color: inherit;
-            transition: all 0.3s ease;
-            margin-top: 20px;
-        }
-
-        .blog-featured:hover { 
-            transform: translateY(-8px);
-            border-color: var(--accent);
-            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.2);
-        }
-
-        .blog-img-area {
-            width: 40%;
-            min-height: 180px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .blog-content {
-            padding: 25px;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .read-more {
-            margin-top: 15px;
-            font-weight: 700;
-            color: var(--accent);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-main {
-            display: inline-block;
-            background: var(--accent);
-            color: #0f172a;
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-top: 20px;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-
-        .btn-main:hover {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-
-        @media (max-width: 650px) {
-            .header-content { flex-direction: column; text-align: center; gap: 20px; }
-            .blog-featured { flex-direction: column; }
-            .blog-img-area { width: 100%; min-height: 150px; }
-            .blog-content { width: 100%; }
-            h1 { font-size: 2.2rem; }
-        }
+        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        nav { background: var(--card); padding: 20px; text-align: center; border-bottom: 1px solid #334155; }
+        nav a { color: var(--text); margin: 0 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .hero { padding: 80px 20px; text-align: center; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .info-card { background: var(--card); padding: 40px; border-radius: 20px; border: 1px solid #334155; text-align: left; }
+        h1 { font-size: 2.5rem; margin: 20px 0 5px; }
+        .sub { color: var(--accent); font-size: 1.1rem; margin-bottom: 30px; }
     </style>
 </head>
 <body>
 
-    <header class="header-top">
-        <div class="header-content">
-            <img src="profile.jpeg" alt="Abdullah Ahmad Mirza" class="profile-image">
-            <div class="header-text">
-                <h1>Abdullah Ahmad Mirza</h1>
-                <p>Computer Engineering Student | Future Software Engineer</p>
-            </div>
-        </div>
-    </header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
+<div class="hero">
+    <img src="profile.jpeg" class="profile-img">
+    <h1>Abdullah Ahmad Mirza</h1>
+    <p class="sub">Computer Engineering | UET Faisalabad</p>
+    
     <div class="container">
-        <section class="section-card">
-            <h2>About Me</h2>
-            <p>I am a passionate Computer Engineering student at <strong>UET Lahore</strong>. I specialize in bridging the gap between hardware logic and software architecture, with a focus on C#, SQL, and high-integrity engineering documentation.</p>
-        </section>
-
-        <section class="section-card">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <span class="skill-tag">C# & .NET</span>
-                <span class="skill-tag">SQL Databases</span>
-                <span class="skill-tag">HTML/CSS</span>
-                <span class="skill-tag">WampServer</span>
-                <span class="skill-tag">AI Implementation</span>
-                <span class="skill-tag">Lab Documentation</span>
-            </div>
-        </section>
-
-        <section class="section-card">
-            <h2>Latest Technical Insights</h2>
-            
-            <a href="architecting_determinism.html" class="blog-featured">
-                <div class="blog-img-area" style="background-image: url('system_architecture_flow.png');"></div>
-                <div class="blog-content">
-                    <h3 style="margin:0">Architecting Determinism</h3>
-                    <p style="color:var(--text-dim); font-size: 0.95rem; margin: 5px 0;">Applying the laws of Physics to SQL and Software Architecture.</p>
-                    <div class="read-more">Read Full Article <span>→</span></div>
-                </div>
-            </a>
-
-            <a href="first_blog.html" class="blog-featured" style="margin-top: 20px;">
-                <div class="blog-img-area" style="background-image: url('uet_lab_oscilloscope.png');"></div>
-                <div class="blog-content">
-                    <h3 style="margin:0">The Signal and the Syntax</h3>
-                    <p style="color:var(--text-dim); font-size: 0.95rem; margin: 5px 0;">How UET Lab sessions redefined my approach to Software Engineering.</p>
-                    <div class="read-more">Read Full Article <span>→</span></div>
-                </div>
-            </a>
-        </section>
-
-        <section class="section-card" style="text-align:center">
-            <h2>Professional Goal</h2>
-            <p>To architect stable, scalable software solutions that solve real-world engineering challenges.</p>
-            <a href="mailto:abdullahahmadmirza42@gmail.com" class="btn-main">Say Hello 👋</a>
-        </section>
+        <div class="info-card">
+            <p><strong>Name:</strong> Abdullah Ahmad Mirza</p>
+            <p><strong>Roll No:</strong> [Your Roll Number Here]</p>
+            <p><strong>Section:</strong> [Your Section Here]</p>
+            <p><strong>Campus:</strong> University of Engineering and Technology, Faisalabad</p>
+            <hr style="border: 0; border-top: 1px solid #334155; margin: 20px 0;">
+            <p>Welcome to my professional engineering portfolio. This site documents my journey through software architecture, SQL management, and physical systems engineering.</p>
+        </div>
     </div>
+</div>
 
 </body>
 </html>
