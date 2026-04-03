@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Blog | Abdullah Mirza</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        nav { background: var(--card); padding: 20px; text-align: center; border-bottom: 1px solid #334155; }
+        nav a { color: var(--text); margin: 0 20px; text-decoration: none; font-weight: 600; }
+        .container { max-width: 800px; margin: 50px auto; padding: 20px; }
+        .blog-link { 
+            display: flex; background: var(--card); margin-bottom: 20px; 
+            border-radius: 15px; text-decoration: none; color: inherit; 
+            border: 1px solid #334155; overflow: hidden; transition: 0.3s;
+        }
+        .blog-link:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .img-thumb { width: 30%; background-size: cover; background-position: center; min-height: 150px; }
+        .content { padding: 20px; width: 70%; }
+        h2 { color: var(--accent); margin: 0 0 10px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html" style="color:var(--accent)">Blog</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+    <h1>Engineering Experiences</h1>
+    
+    <a href="architecting_determinism.html" class="blog-link">
+        <div class="img-thumb" style="background-image: url('system_architecture_flow.png');"></div>
+        <div class="content">
+            <h2>Architecting Determinism</h2>
+            <p>Applying the laws of Physics to SQL and Software Architecture.</p>
+        </div>
+    </a>
+
+    <a href="first_blog.html" class="blog-link">
+        <div class="img-thumb" style="background-image: url('uet_lab_oscilloscope.png');"></div>
+        <div class="content">
+            <h2>The Signal and the Syntax</h2>
+            <p>How UET Lab sessions redefined my approach to Software Engineering.</p>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>
