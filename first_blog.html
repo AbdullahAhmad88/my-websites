@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Oscilloscope Interface | Abdullah Ahmad Mirza</title>
+    <style>
+        :root {
+            --bg: #0b0f1a;
+            --surface: #161b2a;
+            --accent: #38bdf8;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        header a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        header a:hover { opacity: 0.8; }
+
+        h1 {
+            font-size: 3.2rem;
+            color: var(--accent);
+            margin: 20px 0 10px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-top: 50px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .blog-image {
+            width: 100%;
+            border-radius: 16px;
+            margin: 40px 0;
+            border: 1px solid #2d3748;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .highlight-box {
+            background: var(--surface);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #2d3748;
+            position: relative;
+            margin: 40px 0;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        strong { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="blog.html">← Return to Blog List</a>
+        <h1>The Oscilloscope and the Interface</h1>
+        <p class="subtitle">Bridging the gap between Hardware Logic and Software Design.</p>
+    </header>
+
+    <main>
+        <p>In the high-voltage environment of a <strong>UET engineering lab</strong>, you learn very quickly that a flickering light bulb is not a victory. Real engineering success is defined by the <strong>integrity of the signal path</strong>. If you cannot trace the voltage across the logic gates with mathematical certainty, you aren't building—you're guessing.</p>
+
+        <img src="tech_architecture.png" alt="Clean code and system architecture visualization" class="blog-image">
+
+        <h2>1. The Fallacy of the "Working" Output</h2>
+        <p>During my early labs, the focus was on data points. But as I moved into complex circuits, the challenge shifted. A circuit might "work" today by pure luck, but without <strong>validated documentation</strong>, it will fail tomorrow under stress.</p>
+
+        <p>This realization changed how I approach <strong>C# programming</strong> and <strong>SQL database management</strong>. In software, the true engineering feat is creating a structure so transparent that any developer can trace the logic without a manual.</p>
+
+        <div class="highlight-box">
+            "True engineering isn't just about output; it's the disciplined observation that validates the structure."
+        </div>
+
+        <h2>2. Signal Integrity in Code</h2>
+        <p>When I debug a <strong>WordPress server</strong> or configure <strong>WampServer</strong>, I apply "Signal Path Logic". Every line of code is a component. If one function passes "noisy" data to the next, the entire system degrades. Just as an oscilloscope reveals the hidden noise in a wire, a rigorous debugging process reveals inefficiencies in an algorithm.</p>
+
+        <p>The gap between a hardware lab and a code editor is smaller than most think. In both domains, the enemy is the <strong>"Black Box"</strong>—a part of the system that does something you don't fully understand. My goal is to eliminate the black box through precise technical writing and clean, modular design.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Ahmad Mirza | University of Engineering and Technology</p>
+    </footer>
+</div>
+
+</body>
+</html>
